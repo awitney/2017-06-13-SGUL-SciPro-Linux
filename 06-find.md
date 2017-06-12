@@ -11,6 +11,99 @@ minutes: 15
 > *   Use the output of one command as the command-line parameters to another command.
 > *   Explain what is meant by "text" and "binary" files, and why many common tools don't handle the latter well.
 
+Before we begin with the final session, let me show you three
+commands that are very useful in shell scripts.
+
+The first one is called "sed" and it does text editing. For example,
+you can replace characters and words in a file using:
+~~~ {.bash}
+$ sed -e 's/ /\n/g' haiku.txt
+~~~
+~~~ {.output}
+The
+Tao
+that
+is
+seen
+Is
+not
+the
+true
+Tao,
+until
+You
+bring
+fresh
+toner.
+
+With
+searching
+comes
+loss
+and
+the
+presence
+of
+absence:
+"My
+Thesis"
+not
+found.
+
+Yesterday
+it
+worked
+Today
+it
+is
+not
+working
+Software
+is
+like
+that.
+~~~
+As you can see, here we have replaced spaces with new lines.
+
+The second command is useful in for loops when you need to iterate
+over a list of numbers - it's called "seq", it accepts two numbers
+as arguments and it simply enumerates all numbers from the first to the second:
+
+~~~ {.bash}
+$ seq 1 10
+~~~
+~~~ {.output}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+~~~
+
+The final command is called "backticks" and it's actually used
+by inserting any other command between "inverted apostrophes", such as
+
+~~~ {.bash}
+$ echo `whoami`
+~~~
+~~~ {.output}
+$ nelle
+~~~
+
+As you can see, what the backticks do is first to execute the command in the shell; 
+they then pass the output to the shell, in this case by acting as an argument for "echo".
+The backticks are very useful when you want to assign the result of a calculation
+to a variable, by doing for example
+
+~~~ {.bash}
+$ me=`whoami`
+~~~
+
 You can guess someone's age by how they talk about search:
 young people use "Google" as a verb,
 while crusty old Unix programmers use "grep".

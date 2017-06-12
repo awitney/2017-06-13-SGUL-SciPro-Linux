@@ -23,10 +23,10 @@ commands that are very useful in shell scripts.
 
 The first one is called "sed" and it does text editing. For example,
 you can replace characters and words in a file using:
-~~~ {.bash}
+~~~ {: .bash}
 $ sed -e 's/ /\n/g' haiku.txt
 ~~~
-~~~ {.output}
+~~~ {: .output}
 The
 Tao
 that
@@ -76,10 +76,10 @@ The second command is useful in for loops when you need to iterate
 over a list of numbers - it's called "seq", it accepts two numbers
 as arguments and it simply enumerates all numbers from the first to the second:
 
-~~~ {.bash}
+~~~ {: .bash}
 $ seq 1 10
 ~~~
-~~~ {.output}
+~~~ {: .output}
 1
 2
 3
@@ -95,10 +95,10 @@ $ seq 1 10
 The final command is called "backticks" and it's actually used
 by inserting any other command between "inverted apostrophes", such as
 
-~~~ {.bash}
+~~~ {: .bash}
 $ echo `whoami`
 ~~~
-~~~ {.output}
+~~~ {: .output}
 $ nelle
 ~~~
 
@@ -107,7 +107,7 @@ they then pass the output to the shell, in this case by acting as an argument fo
 The backticks are very useful when you want to assign the result of a calculation
 to a variable, by doing for example
 
-~~~ {.bash}
+~~~ {: .bash}
 $ me=`whoami`
 ~~~
 

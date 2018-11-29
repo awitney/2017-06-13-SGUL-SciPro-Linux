@@ -41,6 +41,17 @@ Several commands are frequently used to create, inspect, rename, and delete file
 To start exploring them,
 let's open a shell window:
 
+> ## Setup
+>
+> Copy the workshop data files to your home directory using
+
+~~~
+cp -r /homedirs8/workshop/data-shell/ .
+~~~
+{: .bash}
+
+now you are ready to proceed with the workshop
+
 > ## Preparation Magic
 >
 > If you type the command:

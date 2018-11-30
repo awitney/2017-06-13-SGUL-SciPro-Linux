@@ -22,7 +22,7 @@ keypoints:
 
 We now know how to explore files and directories,
 but how do we create them in the first place?
-Let's go back to our `data-shell` directory on the Desktop
+Let's go back to our `data-shell` directory in our home directory
 and use `ls -F` to see what it contains:
 
 ~~~
@@ -31,7 +31,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/...../data-shell
 ~~~
 {: .output}
 
@@ -222,7 +222,7 @@ $ ls
 {: .callout}
 
 Let's re-create that file
-and then move up one directory to `/Users/nelle/Desktop/data-shell` using `cd ..`:
+and then move up one directory to `/...../data-shell` using `cd ..`:
 
 ~~~
 $ pwd
@@ -230,7 +230,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/thesis
+/...../data-shell/thesis
 ~~~
 {: .output}
 
@@ -302,7 +302,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/...../data-shell
 ~~~
 {: .output}
 

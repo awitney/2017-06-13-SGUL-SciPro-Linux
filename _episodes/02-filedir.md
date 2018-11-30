@@ -44,6 +44,7 @@ let's open a shell window:
 > ## Setup
 >
 > Copy the workshop data files to your home directory using
+{: .callout}
 
 ~~~
 cp -r /homedirs8/workshop/data-shell/ .

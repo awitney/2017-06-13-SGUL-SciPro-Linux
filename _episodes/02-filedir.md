@@ -444,14 +444,14 @@ which doesn't exist.
 {: .callout}
 
 We can also use `ls` to see the contents of a different directory.  Let's take a
-look at our `Desktop` directory by running `ls -F Desktop`,
+look at our `home` directory by running `ls -F`,
 i.e.,
-the command `ls` with the **arguments** `-F` and `Desktop`.
+the command `ls` with the **arguments** `-F`.
 The second argument --- the one *without* a leading dash --- tells `ls` that
 we want a listing of something other than our current working directory:
 
 ~~~
-$ ls -F Desktop
+$ ls -F
 ~~~
 {: .bash}
 
@@ -461,8 +461,8 @@ data-shell/
 {: .output}
 
 Your output should be a list of all the files and sub-directories on your
-Desktop, including the `data-shell` directory you downloaded at
-the start of the lesson.  Take a look at your Desktop to confirm that
+H: drive, including the `data-shell` directory you downloaded at
+the start of the lesson.  Take a look at your H: drive to confirm that
 your output is accurate.  
 
 As you may now see, using a bash shell is strongly dependent on the idea that
@@ -472,14 +472,14 @@ it's possible to put hundreds of files in our home directory,
 just as it's possible to pile hundreds of printed papers on our desk,
 but it's a self-defeating strategy.
 
-Now that we know the `data-shell` directory is located on our Desktop, we
+Now that we know the `data-shell` directory is located on our home, we
 can do two things.  
 
 First, we can look at its contents, using the same strategy as before, passing
 a directory name to `ls`:
 
 ~~~
-$ ls -F Desktop/data-shell
+$ ls -F data-shell
 ~~~
 {: .bash}
 
@@ -504,18 +504,18 @@ Let's say we want to move to the `data` directory we saw above.  We can
 use the following series of commands to get there:
 
 ~~~
-$ cd Desktop
 $ cd data-shell
 $ cd data
 ~~~
 {: .bash}
 
-These commands will move us from our home directory onto our Desktop, then into
+These commands will move us from our home directory into
 the `data-shell` directory, then into the `data` directory.  `cd` doesn't print anything,
 but if we run `pwd` after it, we can see that we are now
-in `/Users/nelle/Desktop/data-shell/data`.
+in `/...../data-shell/data`. Your results will replace the '.....' with something
+specific to your username.
 If we run `ls` without arguments now,
-it lists the contents of `/Users/nelle/Desktop/data-shell/data`,
+it lists the contents of `data-shell/data`,
 because that's where we now are:
 
 ~~~
@@ -524,7 +524,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/...../data-shell/data
 ~~~
 {: .output}
 
@@ -572,7 +572,7 @@ $ cd ..
 or more succinctly,
 the **parent** of the current directory.
 Sure enough,
-if we run `pwd` after running `cd ..`, we're back in `/Users/nelle/Desktop/data-shell`:
+if we run `pwd` after running `cd ..`, we're back in `data-shell`:
 
 ~~~
 $ pwd
@@ -580,7 +580,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/....../data-shell
 ~~~
 {: .output}
 
@@ -667,7 +667,7 @@ three commands, but we can actually string together the list of directories
 to move to `data` in one step:
 
 ~~~
-$ cd Desktop/data-shell/data
+$ cd data-shell/data
 ~~~
 {: .bash}
 
@@ -699,12 +699,12 @@ $ pwd
 {: .bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/...../data-shell/data
 ~~~
 {: .output}
 
 ~~~
-$ cd /Users/nelle/Desktop/data-shell
+$ cd data-shell
 ~~~
 {: .bash}
 
